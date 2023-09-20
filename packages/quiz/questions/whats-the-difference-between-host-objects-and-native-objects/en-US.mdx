@@ -5,3 +5,12 @@ title: What's the difference between host objects and native objects?
 Native objects are objects that are part of the JavaScript language defined by the ECMAScript specification, such as `String`, `Math`, `RegExp`, `Object`, `Function`, etc.
 
 Host objects are provided by the runtime environment (browser or Node), such as `window`, `XMLHTTPRequest`, etc.
+
+Key Differences
+source: Native objects are part of the JavaScript language itself, while host objects are provided by the host environment.
+Portability: Native objects are available in any environment where JavaScript runs, whereas host objects are specific to the environment. For instance, server-side JavaScript environments like Node.js have different host objects compared to browsers.
+Specification: Native objects are defined in the ECMAScript specification, or are de facto standard objects commonly available across different environments. Host objects are usually defined by environment-specific specifications (like the DOM specification for web browsers).
+Purpose: Native objects are general-purpose and are designed to be used in any JavaScript application. Host objects serve specific functions related to the host environment, like manipulating the DOM in a web browser or handling file I/O in a Node.js application.
+Extensibility: Native objects often have methods and properties that can be used across different types of applications, and you can add your own methods to their prototypes. The behavior and extensibility of host objects can vary by environment and even by browser.
+Reliability: Native objects are usually more consistent and reliable across different JavaScript environments, while host objects can behave differently depending on the browser or server environment.
+Understanding the distinction between host and native objects can help you write more portable and maintainable code.
